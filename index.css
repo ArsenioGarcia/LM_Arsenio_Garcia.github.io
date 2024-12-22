@@ -52,7 +52,13 @@ form{
     flex-direction: column;
     gap: 3em;
     width: 100%;
-    max-width: 400px; 
+    max-width: 400px;
+}
+
+form:hover{
+    transform: rotate(-2deg);
+    background-color: lightpink;
+    transition: 2s;
 }
 
 label > a{
@@ -94,6 +100,7 @@ aside {
     left: 50%;
     margin-left: -60px;
     opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
   
 .tooltip .textotooltip::after {
@@ -105,6 +112,7 @@ aside {
 .tooltip:hover .textotooltip {
     visibility: visible;
     opacity: 2;
+    animation: fadeOut 5s forwards;
 }
 
 nav {
@@ -133,6 +141,18 @@ nav > ul > li> a {
     color: black;
 }
 
+.search-input {
+    width: 150px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+}
+
+.search-input:focus {
+    width: 250px;
+    outline: none;
+}
 
 .texto {
     background-color: dimgrey;
